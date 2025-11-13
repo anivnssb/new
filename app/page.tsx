@@ -1,65 +1,52 @@
 import Image from "next/image";
+import img_one from "@/public/images/chris-montgomery-smgTvepind4-unsplash.jpg";
+import img_two from "@/public/images/detail-co-Z7-J5dhQtwo-unsplash.jpg";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="h-svh max-w-2/3 m-auto">
+      <header className="flex flex-col md:flex-row mt-16 justify-around">
+        <div className="w-2xl">
+          <h3 className="text-3xl font-bold pb-4 pt-4 text-gray-500">
+            Hey! Meet
+          </h3>
+          <p className="text-6xl font-bold pb-4 pt-4">
+            Video calls with anyone, anywhere
+          </p>
+          <p className="text-2xl pb-4 pt-4 text-gray-500">
+            Stay connected and collaborate with friends, family and colleagues,
+            no matter where you are.
+          </p>
+          <button className="bg-blue-400 px-8 py-3 rounded-[5px] text-[16px] hover:bg-blue-500 active:bg-blue-400 cursor-pointer ">
+            Sign in
+          </button>
+        </div>
+        <div className="pt-48">
+          <Image
+            className="w-sm h-min rounded-3xl border-4 border-white shadow-md"
+            src={img_one}
+            alt="home"
+          />
+        </div>
+      </header>
+      <section className="pt-36 flex flex-col md:flex-row justify-evenly">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          className="w-sm h-min rounded-3xl border-4 border-white shadow-md"
+          src={img_two}
+          alt="home"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className="w-md">
+          <p className="text-4xl font-bold pb-4 pt-16">
+            Experience rich, collaborative meetings with Hey-Meet
+          </p>
+          <p>
+            Look and sound your best with studio look, studio sound and studio
+            lighting. Connect in 65+ languages with translated captions. Use
+            'take notes for me' for meeting details. Try all this and more to
+            unlock the power of generative AI with Gemini for Google Workspace.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }
